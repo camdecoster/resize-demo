@@ -229,6 +229,11 @@ figure {
     margin-inline-end: 0px;
 }
 
+figure.scaled-figure {
+    display: flex;
+    justify-content: center;
+}
+
 /*
  * Images.
  */
@@ -245,6 +250,26 @@ img.image {
 
 figure.fullwidth img {
     width: 100%;
+}
+
+img.scaled-img {
+    /*
+        Setting the width to an explicit number provides an independent container element and
+        everything works correctly.
+     */
+    /* width: 500px; */
+    /*
+        Setting the width to a percentage increases the size of the of the image, but the width of
+        the image is calculated using the intrinsic size
+        (https://developer.mozilla.org/en-US/docs/Glossary/Intrinsic_Size)
+        during the initial layout phase and doesn't get updated as the image is scaled up.
+     */
+    width: 120%;
+    /* 
+        Using a scale transform increases the size of the image but doesn't update the page layout.
+        As such, the image element will begin to overlap surrounding elements at higher scales.
+     */
+    /* transform: scale(1.6); */
 }
 
 /*
