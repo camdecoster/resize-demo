@@ -34,31 +34,36 @@ class: slide-title
 
 <figure class="scaled-figure">
 <!-- Use container to center image using flexbox -->
-<div class="container">
-<img class="scaled-img" src="recursive_evaluation.svg" alt="Recursive evaluation of an expression tree"/>
-</div>
+  <div class="container">
+    <img class="scaled-img" src="recursive_evaluation.svg" alt="Recursive evaluation of an expression tree"/>
+  </div>
 </figure>
 
 <p>Text after diagram</p>
 
 ---
 
-## An Example
+## Checking on Scaling
 
-```tll
-["add", ["abs", -3], 2]
-```
+<p>Do all figures scale up the same amount so that fonts appear the same size?</p>
 
+<figure class="scaled-figure">
+  <div class="container">
+    <img class="scaled-img" src="concept_map.svg" alt="Concept Map"/>
+  </div>
+</figure>
 
-```sh
-python expr.py expr.tll
-```
+---
 
+## More Checking
 
-```
-=> 5
-```
+<p>Here's a small figure: how does it scale?</p>
 
+<figure class="scaled-figure">
+  <div class="container">
+    <img class="scaled-img" src="triangle.svg" alt="Nested Loops as Triangles"/>
+  </div>
+</figure>
 
     </textarea>
     <script src="remark-latest.min.js"></script>
